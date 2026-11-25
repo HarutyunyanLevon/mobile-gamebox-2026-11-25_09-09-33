@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: App
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: App
+  m_GUID: 29d834a944d472445a32f1af2ba71def
+  m_SerializeEntries:
+  - m_GUID: 56cbd36aba6c9d246b68147601cfe108
+    m_Address: App/Hub
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+    m_FolderGuid: 
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0e86537687920bf4b81a1ffc27cfb940, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d2cedaa0c6885314abd39d52cb4e56a3, type: 2}
+    - {fileID: 11400000, guid: 48ccde031c3ffd144b86f16f478a1b02, type: 2}
+    m_SchemaDisplayOrder:
+    - App_BundledAssetGroupSchema
+    - App_ContentUpdateGroupSchema
+  m_IncludeInBuild: 1
+  m_IncludeInBuildMigrated: 1

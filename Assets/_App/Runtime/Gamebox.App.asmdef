@@ -1,0 +1,21 @@
+{
+    "name": "Gamebox.App",
+    "rootNamespace": "Gamebox.App",
+    "references": [
+        "Gamebox.Core",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "VContainer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
