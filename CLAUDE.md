@@ -69,6 +69,7 @@ Create missing files on first use. Never delete reports; supersede them with new
 - Every system ships with debug cheats (`debug-cheats` skill), compiled out of release builds. A system without cheats isn't done.
 - Budgets: see the Platform table (override in `TUNING.md`). On every platform: 0 B GC allocations per frame in gameplay.
 - If Unity plugin skills are installed (`unity:*`, `unity-perf:*`), use them for engine-level work and keep these skills for the process around it.
+- Keep `com.unity.pipeline` in the project so agents can drive the open Editor (`unity:unity-cli`: tests, recompile). Use batch mode only when the Editor is closed.
 
 ## Platform
 
@@ -103,5 +104,7 @@ The game project's `CLAUDE.md` names its platform on a line **outside** this blo
 | IAP, ads, pricing | `game-monetization-manager` |
 | Remote config, flags, analytics, A/B | `game-config-analytics-engineer` |
 | Store builds and submission | `mobile-release-engineer` |
+| Package or asmdef added or changed | `asmdef-layering-check` skill |
+| Before any commit; settings you didn't touch | `settings-drift-check` skill |
 <!-- unity-gamedev-team:end -->
 

@@ -44,3 +44,5 @@ Put the static table, the probe error line and the clean re-run result in the ta
 ## Keep it checked
 
 Suggest one EditMode test per test assembly that reads its package's asmdefs and asserts the rule. It's cheap, runs in CI, and keeps the test assembly non-empty.
+
+The test must also prove it can fail. Put the rule in a small method (for example `FindViolation(reference)`), and add a `[TestCase]` test that feeds it one forbidden reference of each kind (a `GUID:` reference and a sibling or higher assembly) and expects both to be rejected. Without that test, a check that never fails, like an always-true condition or a parse that returns no references, passes forever. Branches that real asmdefs never reach, such as GUID rejection, otherwise never run.
