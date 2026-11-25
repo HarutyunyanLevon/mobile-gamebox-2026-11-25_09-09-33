@@ -29,6 +29,24 @@ Precedence: the owner in chat beats an answered question in `QUESTIONS.md`, whic
 1. Read the top of `docs/design/CHANGELOG.md`. If the version is newer than the one recorded in `STAGE.md`, read what changed and re-check the current tasks against it.
 2. Read `QUESTIONS.md`. For every answered question (a `- [x]` line followed by an indented `- A:` line), apply the answer, remove the matching `// DESIGN-Q:` markers in code, and mention it in the session report.
 
+## Running a Dreamer task
+
+Newer Dreamer versions hand over one task file per card change instead of (or beside) a full pack. Recognize it by `.dreamer/link.json` in the repo; it names the paths:
+
+| `link.json` key | Meaning |
+|---|---|
+| `tasks_dir` | Task files, for example `docs/design/tasks/YYYY-MM-DD-<slug>.md`. The frontmatter `cards:` lists the card ids the task builds |
+| `status_file` | Build status, for example `docs/design/STATUS.md` |
+| `outbox` | Folder Dreamer picks up report cards from (git-ignored with `.dreamer/`) |
+| `cards[]` | Card id, title, stage, `build_status` and `dirty` flag. Read only |
+
+1. Read the task's Goal, What to build, Acceptance criteria, Out of scope and Report back sections. On a rebuild, the "Design change since last build" diff is the only thing to apply; keep everything that already matches.
+2. If something is missing or contradicts the repo, ask the owner in chat when they're present. Otherwise use a `QUESTIONS.md` line (below) with the most conservative option.
+3. Commit once per logical step, each message starting with `[dreamer:<card id>]`.
+4. Verify every acceptance item with evidence (compile log, test results, a grep), not assumption.
+5. In `STATUS.md`, keep the first two lines exactly as they are. Add or replace one section per card, in the format the task's Report back gives (`## <card id> · <title>`, then `status`, `task`, `commits`, `files`, `evidence`, `notes`).
+6. Report card: write one card per task to `<outbox>/<ULID>.md` in the card format below. Use `stage: reverie`, `source: claude`, tags from the task card plus `report`, and a link to the built card with `label: build report of`. The body holds the status, commits, the acceptance checklist with evidence, and open questions. Writing to the outbox is always allowed; it's not the Dreamer workspace.
+
 ## Asking a design question
 
 Ask when the pack is silent, two docs contradict each other, or a TBD blocks the task. Engineering questions (which API, how to structure code) are the team's call; don't ask them.
