@@ -2,7 +2,9 @@
     "name": "Gamebox.UI",
     "rootNamespace": "Gamebox.UI",
     "references": [
-        "Gamebox.Core"
+        "Gamebox.Core",
+        "UnityEngine.UI",
+        "VContainer"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
