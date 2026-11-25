@@ -1,0 +1,19 @@
+{
+    "name": "Gamebox.HiddenObject.Editor",
+    "rootNamespace": "Gamebox.HiddenObject.Editor",
+    "references": [
+        "Gamebox.HiddenObject",
+        "Gamebox.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

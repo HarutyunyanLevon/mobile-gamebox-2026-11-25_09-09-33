@@ -22,6 +22,14 @@
         "com.gamebox.core": "0.1.0"
       }
     },
+    "com.gamebox.hiddenobject": {
+      "version": "file:com.gamebox.hiddenobject",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.gamebox.core": "0.1.0"
+      }
+    },
     "com.gamebox.ui": {
       "version": "file:com.gamebox.ui",
       "depth": 0,

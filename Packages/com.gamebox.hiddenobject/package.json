@@ -1,0 +1,13 @@
+{
+  "name": "com.gamebox.hiddenobject",
+  "version": "0.1.0",
+  "displayName": "Gamebox Hidden Object",
+  "description": "Hidden object demo game: find listed objects in a scene.",
+  "unity": "6000.0",
+  "author": {
+    "name": "Levon"
+  },
+  "dependencies": {
+    "com.gamebox.core": "0.1.0"
+  }
+}
