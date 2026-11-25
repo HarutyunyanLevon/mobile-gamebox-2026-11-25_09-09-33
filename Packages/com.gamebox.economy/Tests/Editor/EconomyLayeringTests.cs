@@ -15,6 +15,8 @@ namespace Gamebox.Economy.Tests
         private const string GameboxPrefix = "Gamebox.";
         private const string CoreAssemblyName = "Gamebox.Core";
         private const string GuidPrefix = "GUID:";
+        private const string ForbiddenGuidReference = "GUID:00000000000000000000000000000000";
+        private const string ForbiddenSiblingReference = "Gamebox.UI";
         private const int ExpectedAsmdefCount = 3;
 
         // Field names match the asmdef JSON keys, so they break the usual naming rule on purpose.
@@ -36,14 +38,33 @@ namespace Gamebox.Economy.Tests
                 AsmdefData asmdef = JsonUtility.FromJson<AsmdefData>(File.ReadAllText(path));
                 foreach (string reference in asmdef.references ?? Array.Empty<string>())
                 {
-                    Assert.IsFalse(reference.StartsWith(GuidPrefix, StringComparison.Ordinal),
-                        $"{asmdef.name} references '{reference}'; use assembly names so layering can be checked.");
-                    if (reference.StartsWith(GameboxPrefix, StringComparison.Ordinal))
-                    {
-                        Assert.IsTrue(IsAllowed(reference), $"{asmdef.name} must not reference '{reference}' (layer rule).");
-                    }
+                    string violation = FindViolation(reference);
+                    Assert.IsNull(violation, $"{asmdef.name} {violation}");
                 }
             }
+        }
+
+        // Proves the check can fail; a check that never fails would pass silently.
+        [TestCase(ForbiddenGuidReference)]
+        [TestCase(ForbiddenSiblingReference)]
+        public void FindViolation_RejectsForbiddenReference(string reference)
+        {
+            Assert.IsNotNull(FindViolation(reference));
+        }
+
+        private static string FindViolation(string reference)
+        {
+            if (reference.StartsWith(GuidPrefix, StringComparison.Ordinal))
+            {
+                return $"references '{reference}'; use assembly names so layering can be checked.";
+            }
+
+            if (reference.StartsWith(GameboxPrefix, StringComparison.Ordinal) && !IsAllowed(reference))
+            {
+                return $"must not reference '{reference}' (layer rule).";
+            }
+
+            return null;
         }
 
         private static bool IsAllowed(string reference) =>
