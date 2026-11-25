@@ -1,0 +1,11 @@
+{
+  "name": "com.gamebox.core",
+  "version": "0.1.0",
+  "displayName": "Gamebox Core",
+  "description": "Save, dependency wiring, configs, time, sound, haptics, signals and content loading shared by every module.",
+  "unity": "6000.0",
+  "author": {
+    "name": "Levon"
+  },
+  "dependencies": {}
+}

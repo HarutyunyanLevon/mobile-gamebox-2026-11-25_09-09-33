@@ -1,0 +1,16 @@
+{
+    "name": "Gamebox.Economy",
+    "rootNamespace": "Gamebox.Economy",
+    "references": [
+        "Gamebox.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

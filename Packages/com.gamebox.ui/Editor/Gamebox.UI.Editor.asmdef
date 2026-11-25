@@ -1,0 +1,19 @@
+{
+    "name": "Gamebox.UI.Editor",
+    "rootNamespace": "Gamebox.UI.Editor",
+    "references": [
+        "Gamebox.UI",
+        "Gamebox.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

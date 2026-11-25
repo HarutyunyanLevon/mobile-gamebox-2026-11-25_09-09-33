@@ -1,0 +1,19 @@
+{
+    "name": "Gamebox.Economy.Editor",
+    "rootNamespace": "Gamebox.Economy.Editor",
+    "references": [
+        "Gamebox.Economy",
+        "Gamebox.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

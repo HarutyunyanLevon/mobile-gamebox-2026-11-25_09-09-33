@@ -1,0 +1,13 @@
+{
+  "name": "com.gamebox.economy",
+  "version": "0.1.0",
+  "displayName": "Gamebox Economy",
+  "description": "Currencies, rewards, inventory, energy, lives and boosters.",
+  "unity": "6000.0",
+  "author": {
+    "name": "Levon"
+  },
+  "dependencies": {
+    "com.gamebox.core": "0.1.0"
+  }
+}
