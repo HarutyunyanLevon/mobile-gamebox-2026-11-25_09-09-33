@@ -1,5 +1,35 @@
 {
   "dependencies": {
+    "com.gamebox.cheats": {
+      "version": "file:com.gamebox.cheats",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.gamebox.core": "0.1.0"
+      }
+    },
+    "com.gamebox.core": {
+      "version": "file:com.gamebox.core",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.gamebox.economy": {
+      "version": "file:com.gamebox.economy",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.gamebox.core": "0.1.0"
+      }
+    },
+    "com.gamebox.ui": {
+      "version": "file:com.gamebox.ui",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.gamebox.core": "0.1.0"
+      }
+    },
     "com.unity.2d.animation": {
       "version": "16.0.1",
       "depth": 0,
